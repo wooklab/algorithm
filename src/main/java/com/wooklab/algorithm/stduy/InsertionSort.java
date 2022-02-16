@@ -11,7 +11,7 @@ public class InsertionSort {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         int[] target = Arrays.stream(input.split(" ")).mapToInt(Integer::parseInt).toArray();
-        System.out.println(s.solution(target.length, target));
+        System.out.println(s.solution2(target.length, target));
     }
 
     private String solution(int count, int[] numbers) {
@@ -24,5 +24,24 @@ public class InsertionSort {
             numbers[j] = tmp;
         }
         return Arrays.stream(numbers).mapToObj(String::valueOf).collect(Collectors.joining(", "));
+    }
+
+    private String solution2(int n, int[] a) {
+        for (int i = 1; i < n; i++) {
+            int tmp = a[i];
+            int c = i;
+            while (c > 0 && tmp < a[c - 1]) {
+                a[c] = a[c - 1];
+                c--;
+            }
+            a[c] = tmp;
+        }
+        return Arrays.stream(a).mapToObj(String::valueOf).collect(Collectors.joining(", "));
+    }
+
+    private void swap(int[] a, int i, int j) {
+        int tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
     }
 }
