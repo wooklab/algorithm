@@ -100,8 +100,8 @@ public class BubbleSort {
 
     private String arrayToString(int[] v) {
         return Arrays.stream(v)
-                .mapToObj(String::valueOf)
-                .collect(Collectors.joining(", "));
+                     .mapToObj(String::valueOf)
+                     .collect(Collectors.joining(", "));
     }
 
     private void swap(int[] numbers, int i, int j) {

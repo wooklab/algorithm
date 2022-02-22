@@ -36,7 +36,9 @@ public class InsertionSort {
             }
             a[c] = tmp;
         }
-        return Arrays.stream(a).mapToObj(String::valueOf).collect(Collectors.joining(", "));
+        return Arrays.stream(a)
+                     .mapToObj(String::valueOf)
+                     .collect(Collectors.joining(", "));
     }
 
     private void swap(int[] a, int i, int j) {

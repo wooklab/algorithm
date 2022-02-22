@@ -22,7 +22,7 @@ public class BidirectionBubbleSort {
             int leftLastSwappedIndex = n - 1;
             int rightLastSwappedIndex = 0;
 
-            int remainedCount = (n - 1 - leftCursor) + (n - 1 - rightCursor);
+            int remainedCount = rightCursor - leftCursor + 1;
             if (remainedCount % 2 == 0) {
                 for (int i = 0; i < rightCursor; i++) {
                     if (a[i] > a[i + 1]) {

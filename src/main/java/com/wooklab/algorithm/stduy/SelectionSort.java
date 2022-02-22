@@ -24,7 +24,9 @@ public class SelectionSort {
             }
             swap(numbers, i, min);
         }
-        return Arrays.stream(numbers).mapToObj(String::valueOf).collect(Collectors.joining(", "));
+        return Arrays.stream(numbers)
+                     .mapToObj(String::valueOf)
+                     .collect(Collectors.joining(", "));
     }
 
     private void swap(int[] numbers, int i, int j) {
