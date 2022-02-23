@@ -43,6 +43,9 @@ public class Main {
         for (int i = 0; i < count; i++) {
             int rank = 1;
             for (int j = 0; j < count; j++) {
+                if (i == j) {
+                    continue;
+                }
                 if (points[i] < points[j]) {
                     rank++;
                 }
