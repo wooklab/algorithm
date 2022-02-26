@@ -2,10 +2,10 @@ package com.wooklab.algorithm.stduy.searchtext;
 
 import java.util.Scanner;
 
-public class BruteForce {
+public class BruteForceSearch {
 
     public static void main(String[] args) {
-        BruteForce main = new BruteForce();
+        BruteForceSearch main = new BruteForceSearch();
         Scanner sc = new Scanner(System.in);
         String text = sc.nextLine();
         String pattern = sc.nextLine();
