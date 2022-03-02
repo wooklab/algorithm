@@ -1,4 +1,4 @@
-package com.wooklab.algorithm.stduy.sort;
+package com.wooklab.algorithm.study.sort;
 
 import java.util.Arrays;
 import java.util.Collections;

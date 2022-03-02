@@ -1,4 +1,4 @@
-package com.wooklab.algorithm.stduy.searchtext;
+package com.wooklab.algorithm.study.searchtext;
 
 import java.util.Scanner;
 
