@@ -5,6 +5,8 @@ public class Solution1 {
     public static void main(String[] args) {
         Solution1 s = new Solution1();
 
+        System.out.println(s.solution(12));
+        System.out.println(s.solution(152));
         System.out.println(s.solution(1000));
     }
 

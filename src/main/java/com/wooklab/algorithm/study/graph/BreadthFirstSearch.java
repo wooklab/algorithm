@@ -46,6 +46,7 @@ public class BreadthFirstSearch {
     }
 
     private void bfsWithRecursive(boolean[] visited, int[][] graph, int x) {
+        // TODO: incorrect..!
         visited[x] = true;
         System.out.print(x + " ");
         for (int i = 0; i < graph[x].length; i++) {
