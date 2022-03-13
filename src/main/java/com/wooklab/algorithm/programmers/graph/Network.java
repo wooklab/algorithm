@@ -1,5 +1,7 @@
 package com.wooklab.algorithm.programmers.graph;
 
+import java.util.Stack;
+
 /**
  * https://programmers.co.kr/learn/courses/30/lessons/43162
  */
@@ -27,6 +29,7 @@ public class Network {
         for (int i = 0; i < computers.length; i++) {
             if (!visited[i]) {
                 dfs(computers, visited, i);
+//                dfsWithStack(computers, visited, i);
                 answer++;
             }
         }
@@ -38,6 +41,23 @@ public class Network {
         for (int i = 0; i < computers[pos].length; i++) {
             if (!visited[i] && computers[pos][i] == 1) {
                 dfs(computers, visited, i);
+            }
+        }
+    }
+
+    private void dfsWithStack(int[][] computers, boolean[] visited, int pos) {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(pos);
+
+        while (!stack.isEmpty()) {
+            int currentPos = stack.pop();
+            if (!visited[currentPos]) {
+                visited[currentPos] = true;
+                for (int i = 0; i < computers[currentPos].length; i++) {
+                    if (!visited[i] && computers[currentPos][i] == 1) {
+                        stack.push(i);
+                    }
+                }
             }
         }
     }
