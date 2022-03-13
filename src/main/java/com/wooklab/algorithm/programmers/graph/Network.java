@@ -1,5 +1,8 @@
 package com.wooklab.algorithm.programmers.graph;
 
+/**
+ * https://programmers.co.kr/learn/courses/30/lessons/43162
+ */
 public class Network {
 
     public static void main(String[] args) {

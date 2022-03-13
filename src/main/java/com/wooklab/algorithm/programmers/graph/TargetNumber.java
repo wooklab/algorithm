@@ -62,5 +62,4 @@ public class TargetNumber {
         }
         return answer;
     }
-
 }
