@@ -1,4 +1,4 @@
-package com.wooklab.algorithm.programmers.graph;
+package com.wooklab.algorithm.programmers.dfsbfs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
