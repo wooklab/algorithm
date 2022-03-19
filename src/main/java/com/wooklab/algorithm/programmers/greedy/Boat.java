@@ -15,13 +15,13 @@ public class Boat {
     }
 
     public int solution(int[] people, int limit) {
+        Arrays.sort(people);
         int answer = 0;
         boolean[] check = new boolean[people.length];
-        Arrays.sort(people);
         int startPos = 0;
         int endPos = people.length - 1;
         int checkCount = 0;
-        for (int i = 0; i < people.length; i++) {
+        while (checkCount < check.length) {
             while (startPos < people.length - 1 && check[startPos]) {
                 startPos++;
             }
@@ -38,9 +38,6 @@ public class Boat {
                 checkCount++;
             }
             answer++;
-            if (checkCount == check.length) {
-                break;
-            }
         }
         return answer;
     }
